@@ -3,7 +3,7 @@ zerver
 
 Application with a custom HttpServer that allows multiples access at the same time (concurrency) and has 3 calls listed below:
 
-## Login
+### Login
 
 Request: GET /<userid>/login
 Response: <sessionkey>
@@ -11,7 +11,7 @@ Response: <sessionkey>
 <sessionkey> : A string representing session (valid for 10 minutes).
 Example: http://localhost:8081/4711/login --> UICSNDK
 
-## Register Score
+### Register Score
 
 Request: POST /<levelid>/score?sessionkey=<sessionkey>
 Request body: <score>
@@ -21,7 +21,7 @@ Response: (nothing)
 <score> : 31 bit unsigned integer number
 Example: POST http://localhost:8081/2/score?sessionkey=UICSNDK (with the post body: 1500)
 
-## List Scores
+### List Scores
 
 Request: GET /<levelid>/highscorelist
 Response: CSV of <userid>=<score>
